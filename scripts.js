@@ -1,6 +1,9 @@
 // seleciona os elementos do formulario
 
+const form = document.querySelector('form')
 const amount = document.getElementById('amount')
+const expense = document.getElementById('expense')
+const category = document.getElementById('category')
 
 // capturando o input para formatar o valor
 amount.oninput = () => {
@@ -17,4 +20,8 @@ function formatCurrencyBRL(value) {
     style: 'currency',
     currency: 'BRL'
   })
+}
+
+form.onsubmit = (event) => {
+  event.preventDefault()
 }
